@@ -1,0 +1,956 @@
+button{
+    cursor: pointer;
+}
+input{
+    background-color: #e0e0e0;
+}
+.admin-body{
+    width:100vw;
+    height:100vh;
+    padding:0;
+    margin:0;
+    background-color: white;
+
+}
+.admin-navbar{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:3.4vh;
+    background-color:#4B4B4B;
+
+}
+.admin-navbuttons{
+    width:fit-content;
+    margin:auto;
+}
+.admin-navbuttons button{
+    border:none;
+    width: 14vw;
+    height:2vh;
+    color:white;
+    background-color: #4B4B4B;
+    cursor:pointer;
+    
+}
+.admin-navbuttons button:hover{
+    background-color:#5A5A5A;
+}
+.counts-div{
+    display:flex;
+    align-items: center;
+    gap:10vw;
+    margin-top:25vh;
+   
+}
+.counts{
+    width: 30vw;
+    height:30vh;
+    margin:auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+
+
+}
+.counts h3, p{
+    text-align: center;
+}
+.counts h3{
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.counts p{
+
+    font-size: 2rem;
+
+}
+.counts-image{
+    width:4vw;
+    margin-top: 2vh;
+    margin-left:2vw;
+}
+.attribute-table, .booking-table{
+
+    width:80vw;
+    height:fit-content;
+    margin:auto;
+    margin-top:20vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    
+
+   
+
+}
+.user-attribute-div, .doctor-attribute-div, .appoint-attribute-div, .avail-attribute-div, .active-booking-div, .cancelled-booking-div{
+    width:80vw;
+    height:3vw;
+    border: 1px solid black;
+    margin-bottom: 0.5vh;
+    padding-top:2vh;
+    padding-bottom:2vh;
+    cursor:pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+}
+.attribute-info{
+   
+   
+}
+
+.attribute-info span, .active-booking-info span, .cancelled-booking-info span{
+
+    margin-right:4vw;
+
+
+
+
+
+}
+.edit-forms button:not(.delete-attribute-button){
+    display:block;
+    margin:auto;
+    width:20vw;
+    height:3vh;
+    border:none;
+    border-radius:5px;
+    background-color: #4B4B4B;
+    color:white;
+    cursor:pointer;
+    font-weight: bold;
+    margin-bottom:5vh;
+}
+.edit-forms{
+    width: fit-content;
+    height: fit-content;
+    margin:auto;
+    margin-top:15vh;
+    background-color: #e0e0e0 ;
+    padding:20px;
+
+}
+.edit-forms input{
+    display:block;
+    margin-bottom:3vh;
+    width:20vw;
+    height: 3vh;
+    border-radius:2px;
+
+
+
+}
+.edit-forms label{
+    display: block;
+
+
+}
+.add-forms{
+    width:fit-content;
+    margin:auto;
+    margin-top:10vh;
+    background-color: #e0e0e0;
+    padding:20px;
+    
+}
+.add-forms input{
+    display: block;
+    width:20vw;
+    height:2vh;
+    margin-bottom:3vh;
+    border-radius: 2px;
+    padding:3px
+
+}
+.add-forms label{
+    display:block;
+    margin-bottom:1vh;
+    text-align: center;
+}
+.add-forms button:not(.cancel-add-button){
+    display:block;
+    margin:auto;
+    width:20vw;
+    height:3vh;
+    border:none;
+    border-radius:5px;
+    background-color: #4B4B4B;
+    color:white;
+    cursor:pointer;
+    font-weight: bold;
+
+}
+.add-forms button:not(.cancel-add-button):hover, .edit-forms button:not(.delete-attribute-button):hover{
+    background-color: #5A5A5A;
+}
+.delete-attribute-button{
+    border:none;
+    width: 20vw;
+    height:2vh;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color:red;
+    cursor:pointer;
+    font-size: 0.98rem;
+
+}
+.delete-attribute-button:hover{
+    color:#ff4d4d;
+    text-decoration: underline;
+}
+.edit-forms h3, .add-forms h3{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5vh;
+
+}
+.cancel-add-button{
+    border:none;
+    background-color: #e0e0e0;
+    color:red;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.cancel-add-button:hover{
+    color:#ff4d4d;
+    text-decoration: underline;
+}
+.add-attribute-buttons{
+    border:none;
+    background-color:white;
+    color:#0a1f44;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    
+    cursor: pointer;
+    border-right:0.5px solid black;
+
+}
+.add-attribute-buttons:hover{
+    text-decoration:underline;
+    color:#4B4B4B;
+}
+.toggle-attribute-buttons{
+    border:none;
+    background-color:white;
+    color:#0a1f44;
+    border-right:0.5px solid black;
+    font-weight:bold;
+    letter-spacing: 0.5px;
+    cursor:pointer;
+
+}
+.toggle-attribute-buttons:hover{
+    color: #4B4B4B;
+    text-decoration: underline;
+
+
+
+}
+.user-attribute-div:hover, .doctor-attribute-div:hover, .appoint-attribute-div:hover, .avail-attribute-div:hover{
+    background-color: #e0e0e0;
+}
+.doctor-div{
+    width:fit-content;
+    height: fit-content;
+    margin:auto;
+    text-align: center;
+   
+    
+   
+    
+   
+}
+
+.cancel-form{
+    width:fit-content;
+    height: fit-content;
+    margin:auto;
+    margin-top:15vh;
+    text-align: center;
+    
+}
+.cancel-form button, .reset-password-form button, .reset-password-link-form button{
+    width:20vw;
+    height: 5vh;
+    margin:4vh auto 0 auto;
+    background-color: #2C3E50;
+    border:none;
+    color:white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius:2px;
+    cursor:pointer;
+    
+}
+.cancel-form button:hover, .reset-password-form button:hover, .reset-password-link-form button:hover{
+
+    background-color: #4F637A;
+
+}
+.cancel-form p{
+    text-align: center;
+    font-weight:bolder;
+    letter-spacing: 0.6px;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+
+}
+.user-nav-div{
+    width:100vw;
+    height:5vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #2C3E50;
+
+
+}
+.user-nav-buttons{
+    width:fit-content;
+    margin:auto;
+}
+.user-nav-buttons button{
+    width: 20vw;
+    height:5vh;
+    background-color: #2C3E50;
+    border:none;
+    color:white;
+    font-weight:600px;
+    cursor:pointer;
+}
+.user-nav-buttons button:hover{
+    background-color:#3B4F65;
+}
+#doctor-homepage{
+    margin-top: 18vh;
+}
+#doctor-homepage h1{
+    text-align: center;
+    padding-bottom:10vh;
+}
+.doctor-div button{
+    width: 30vw;
+    height: 5vh;
+   
+    margin: 2vh auto 15vh auto;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+
+}
+.doctor-div button:hover, .book-form button:hover, .cancel-form button:hover{
+    background-color:#3B4F65;
+}
+.doctor-div img{
+    margin: 0 auto 5vh auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.doctor-div h2, p{
+    text-align:center;
+    letter-spacing: 0.9px;
+}
+.chosen-doctor-info{
+    width: fit-content;
+    height:fit-content;
+    padding: 10px;
+    margin:10vh auto 3vh auto;
+    text-align: center;
+}
+.chosen-doctor-info img{
+    width:30vw;
+    border:  1px solid #2C3E50;
+  
+}
+.book-form{
+    width:fit-content;
+    height:fit-content;
+    padding:20px;
+    margin:auto;
+    text-align: center;
+    background-color: #e0e0e0;
+
+}
+.book-form input, select{
+    display:block;
+    margin:3vh auto 3vh auto;
+    width:25vw;
+    height:5vh;
+    border-radius:2px;
+    
+}
+.book-form button{
+    width: 20vw;
+    height: 5vh;
+   
+    margin: 2vh auto 3vh auto;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+
+}
+#booking-form{
+    width:fit-content;
+    height: fit-content;
+    padding-top: 3px;
+    padding-left:30px;
+    padding-right:30px;
+  
+    
+    background-color: #e0e0e0;
+    margin:15vh auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+.appointments-buttons{
+    width: 20vw;
+    border: none;
+    background-color: white;
+    color:#2C3E50;
+    font-weight: bold;
+   
+    cursor:pointer;
+}
+.appointments-buttons:hover{
+    text-decoration: underline;
+    color: #4F637A;
+}
+.appointments-cancel-button{
+    border:none;
+    background-color: white;
+    color:red;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    
+
+}
+.appointments-cancel-button:hover{
+    text-decoration: underline;
+    color: #F28B82;
+
+
+}
+.user-account-info{
+  display: block; 
+  width: 100vw;
+  height: fit-content;
+
+  margin: 0 auto;
+  padding: 0;
+  
+  
+}
+.user-account-info p{
+    text-align: center;
+}
+.user-account-info h3{
+    text-align: center;
+}
+
+
+
+.change-email-form{
+    text-align:center;
+    width:100vw;
+    margin:auto;
+    padding: 10px;
+}
+
+.change-email-form input{
+    display:block;
+    width:20vw;
+    height:3vh;
+    
+    margin: 3vh auto;
+}
+
+  
+
+.change-email-form button{
+    
+    width:15vw;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    padding:8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.black-divider{
+ border-bottom: 1px solid #ccc;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+.change-password-form{
+    text-align:center;
+    width:100vw;
+    padding: 10px;
+
+}
+.change-password-form input{
+    display:block;
+    width: 20vw;
+    height:3vh;
+    margin:3vh auto;
+    
+}
+.change-password-form label{
+ letter-spacing: 0.5px;
+}
+.change-password-form button{
+    width:15vw;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 3vh;
+    cursor:point;
+}
+
+.logout{
+    width:100vw;
+    margin:auto;
+    text-align: center;
+    padding: 0
+}
+.logout button{
+    display:block;
+    width: 12vw;
+    margin: 0 auto;
+    border:none;
+    height: 5vh;
+    background-color:white;
+    font-weight:bold;
+    font-size: 1.3rem;
+    cursor:pointer;
+    color: #2C3E50;
+    box-sizing: border-box;
+    padding: 0;
+   
+    
+}
+.logout button:hover, .delete-account button:hover{
+    text-decoration: underline;
+    color: #4F637A
+}
+.delete-account{
+    width:100vw;
+    margin:auto;
+    text-align: center;
+   
+
+}
+.delete-account button{
+     width: 30vw;
+    margin:auto;
+    border:none;
+    height: 5vh;
+    background-color:white;
+    font-weight:bold;
+    font-size: 1.3rem;
+    cursor:pointer;
+    color: #2C3E50;
+
+}
+.nav-logo{
+    position:fixed;
+    top:0;
+    left:2vw;
+    width: 3.37vw;
+
+
+}
+.login-form{
+    width:fit-content;
+    height:fit-content;
+    margin:auto;
+    text-align: center;
+    margin-top: 10vh;
+    letter-spacing: 0.5px;
+}
+.login-form input{
+    display:block;
+    margin: 3vh auto;
+    width: 20vw;
+    height: 5vh;
+    background-color: #e0e0e0;
+
+}
+.login-form button, .create-account-form button{
+    width: 20vw;
+    height: 5vh;
+   
+    margin: 4.5vh auto 3vh auto;
+    border:none;
+    border-radius: 5px;
+    background-color: #2C3E50;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+    
+}
+.Blue-Logo{
+    position: absolute;
+    top:0;
+    left: 2vw;
+    width: 10vw;
+}
+.create-account-form{
+    width: fit-content;
+    height: fit-content;
+    margin:auto;
+    text-align: center;
+    margin-top: 10vh;
+    letter-spacing: 0.5px;
+}
+   
+
+
+.create-account-form input{
+    display: block;
+    margin: 3vh auto;
+    width: 20vw;
+    height: 5vh;
+    background-color: #e0e0e0;
+}
+.create-account-form p{
+    text-align: center;
+}
+.admin-profile-pic{
+    position: fixed;
+    top:5vh;
+    right: 1vw;
+    width:5vw;
+    cursor:pointer;
+
+}
+.reset-password-form{
+    display:block; 
+    width: fit-content;
+    margin:auto;
+    text-align:center;
+    letter-spacing: 0.8px;
+}
+.reset-password-form input{
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    margin: 3vh auto;
+}
+.reset-password-form p{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    
+}
+.reset-password-link-form{
+    display:block;
+    width:fit-content;
+    height:fit-content;
+    margin:auto;
+    text-align: center;
+}
+.reset-password-link-form input{
+    display:block;
+    width:20vw;
+    height:5vh;
+    margin:3vh auto;
+    
+
+}
+.reset-password-link-form h2{
+    margin-top: 5vh;
+    margin-bottom: 8vh;
+}
+.login-rate-div, .rate-limit-div, .payload-div{
+    width:fit-content;
+    height: fit-content;
+    margin:15vh auto;
+    text-align: center;
+}
+.login-rate-div h1, .rate-limit-div h1, .payload-div h1{
+    font-size: 4rem;
+}
+.login-rate-div p, .rate-limit-div p, .payload-div p{
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.hamburger-icon{
+    display:none;
+}
+.mobile-nav-logo{
+    display:none;
+}
+@media(min-width: 300px) and (max-width: 900px){
+    .login-form input{
+    display:block;
+    margin: 3vh auto;
+    width: 30vw;
+    height: 3vh;
+    background-color: #e0e0e0;
+
+}
+.user-nav-buttons{
+    display:none;
+    width:fit-content;
+    margin:auto;
+  
+    
+}
+.user-nav-buttons button{
+    display:none;
+    width: 10vw;
+    height:2vh;
+    background-color: #2C3E50;
+    border:none;
+    color:white;
+    font-weight:600px;
+    cursor:pointer;
+    
+    
+}
+.user-nav-buttons button:hover{
+    background-color:#3B4F65;
+}
+.user-nav-div{
+    display:none;
+    width:100vw;
+    height:5vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #2C3E50;
+
+
+}
+.nav-logo{
+    position:fixed;
+    top:0;
+    left:2vw;
+    width: 3.37vw;
+
+
+}
+.hamburger-icon{
+    display:block;
+}
+.hamburger-icon img{
+    position: absolute;
+    top:1vh;
+    right:1vw;
+    width: 15vw;
+}
+.vertical-nav{
+    width:70vw;
+    height:70vh;
+    background-color: #2C3E50;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 999;
+}
+.vertical-nav button:not(.menu-close-button){
+    display:block;
+    width: 70vw;
+    height: 5vh;
+    margin-bottom: 3vh;
+    color:white;
+    background-color: #2C3E50;
+    border:none;
+    border-bottom: 0.5px solid black;
+    font-size: 1rem;
+    padding-bottom: 5vh;
+    margin-top: 5vh;
+    font-weight:bold;
+}
+.menu-close-button{
+
+   width: fit-content;
+   margin-top: 30vh;
+   margin-bottom:2vh;
+  
+   color:white;
+   border:none;
+   background-color: #2C3E50;
+   font-size: 1rem;
+   font-weight: bold;
+}
+.arrow-image{
+    width: 8vw;
+}
+.change-password-form button{
+    width:fit-content;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 3vh;
+    cursor:point;
+}
+.doctor-div button{
+    width: fit-content;
+    height: 5vh;
+   
+    margin: 2vh auto 15vh auto;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+
+}
+.delete-account button{
+     width: fit-content;
+    margin:auto;
+    border:none;
+    height: 5vh;
+    background-color:white;
+    font-weight:bold;
+    font-size: 1.3rem;
+    cursor:pointer;
+    color: #2C3E50;
+
+}
+.change-email-form button{
+    
+    width:fit-content;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    padding:8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.book-form button{
+    width: 30vw;
+    height: 5vh;
+   
+    margin: 2vh auto 3vh auto;
+    border:none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+
+}
+.book-form input, select{
+    display:block;
+    margin:3vh auto 3vh auto;
+    width:30vw;
+    height:3vh;
+    border-radius:2px;
+    
+}
+.reset-password-form input{
+    display: block;
+    width: 30vw;
+    height: 3vh;
+    margin: 3vh auto;
+}
+.reset-password-form input{
+    display: block;
+    width: 30vw;
+    height: 3vh;
+    margin: 3vh auto;
+}
+.reset-password-link-form input{
+    display:block;
+    width:30vw;
+    height:3vh;
+    margin:3vh auto;
+    
+
+}
+.change-password-form input{
+    display:block;
+    width: 30vw;
+    height:3vh;
+    margin:3vh auto;
+    
+}
+.change-email-form input{
+    display:block;
+    width:30vw;
+    height:3vh;
+    
+    margin: 3vh auto;
+}
+.user-attribute-div, .doctor-attribute-div, .appoint-attribute-div, .avail-attribute-div, .active-booking-div, .cancelled-booking-div{
+    width:65vw;
+    height:fit-content;
+    padding: 25px;
+    border: 1px solid black;
+    margin-bottom: 0.5vh;
+   
+    cursor:pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+}
+.attribute-info span, .active-booking-info span, .cancelled-booking-info span{
+    display:block;
+    margin-right:10vw;
+    margin-bottom: 3vh;
+    text-align: center;
+
+
+
+
+
+}
+.appointments-buttons{
+    
+    width: fit-content;
+  
+    border: none;
+    background-color: white;
+    color:#2C3E50;
+    font-weight: bold;
+  
+   
+    margin-left: 2vh;
+    margin-right:2vh;
+    margin-bottom:2vh;
+    margin-top: 2vh;
+    
+   
+    cursor:pointer;
+}
+.mobile-nav-logo{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+
+
+
+
+
+
+
+}
+
