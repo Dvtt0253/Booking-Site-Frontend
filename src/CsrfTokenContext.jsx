@@ -4,7 +4,9 @@ import {useState, useEffect} from 'react';
 const CsrfTokenContext = createContext();
 
 export function CsrfTokenProvider({children}){
-    const [csrfToken, setCsrfToken] = useState();
+    const [csrfToken, setCsrfToken] = useState("");
+    
+    
 
     useEffect(()=>{
         const fetchCsrf = async () => {
@@ -25,6 +27,8 @@ export function CsrfTokenProvider({children}){
         }
         fetchCsrf()
     }, [])
+
+   
 
     return(
         <CsrfTokenContext.Provider value={{csrfToken}}>
