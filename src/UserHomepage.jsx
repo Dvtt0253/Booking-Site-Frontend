@@ -25,7 +25,7 @@ function UserHomepage(){
         const fetchData = async () =>{
 
             try{
-                const response = await fetch("http://127.0.0.1:5011/homepage", {
+                const response = await fetch("https://booking-site-api.onrender.com/homepage", {
                     credentials: 'include',
                     headers: {
                     'X-CSRFToken': csrf_token.csrfToken,
@@ -67,7 +67,7 @@ function UserHomepage(){
 
     const fetchAvail = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/send_avail', {
+            const response = await fetch('https://booking-site-api.onrender.com/send_avail', {
                 method: 'POST',
                 body: formData, 
                 credentials: 'include',
@@ -86,7 +86,7 @@ function UserHomepage(){
     }
     const fetchBookingSubmit = async (formData) => {
         try{
-            const response = await fetch ('http://127.0.0.1:5011/submit_booking', {
+            const response = await fetch ('https://booking-site-api.onrender.com/submit_booking', {
                 method: 'POST',
                 headers: {
                     'X-CSRFToken': csrf_token.csrfToken,
