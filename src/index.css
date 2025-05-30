@@ -696,6 +696,14 @@ input{
 .mobile-nav-logo{
     display:none;
 }
+.verify-div{
+    display:block;
+    width: fit-content;
+    height:fit-content;
+    margin:auto;
+    text-align: center;
+    margin-top: 15vh;
+}
 @media(min-width: 300px) and (max-width: 900px){
     .login-form input{
     display:block;
@@ -944,6 +952,7 @@ input{
     top:0;
     left:0;
 }
+
 
 
 
