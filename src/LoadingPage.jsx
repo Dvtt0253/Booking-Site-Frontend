@@ -13,7 +13,7 @@ function LoadingPage(){
 
         const interval = setInterval(async () => {
             try{
-                const response = await fetch('http://127.0.0.1:5011/check_connection', {
+                const response = await fetch('https://booking-site-api.onrender.com/check_connection', {
                     credentials: 'include',
                 });
                 const data = await response.json();
