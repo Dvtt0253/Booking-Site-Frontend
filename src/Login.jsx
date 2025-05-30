@@ -56,7 +56,7 @@ function Login() {
 
                 navigate('/login_page');
                 alert(data.message);
-                setIsLoggedIn(false);
+               
             }
         }catch(error){
             console.log( error);
