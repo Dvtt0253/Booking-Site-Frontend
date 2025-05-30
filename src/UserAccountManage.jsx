@@ -20,7 +20,7 @@ function UserAccountManage({showDelete = true, is_user = true, homepage_path='/h
 
         const fetchUserData = async ()=>{
             try{
-                const response = await fetch('http://127.0.0.1:5011/account_management', {
+                const response = await fetch('https://booking-site-api.onrender.com/account_management', {
                     credentials: 'include',
                 });
 
@@ -52,7 +52,7 @@ function UserAccountManage({showDelete = true, is_user = true, homepage_path='/h
 
     const fetchEmailChange = async (formData) =>{
         try{
-            const response = await fetch('http://127.0.0.1:5011/change_email', {
+            const response = await fetch('https://booking-site-api.onrender.com/change_email', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -85,7 +85,7 @@ function UserAccountManage({showDelete = true, is_user = true, homepage_path='/h
     }
     const fetchPasswordChange = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/change_password', {
+            const response = await fetch('https://booking-site-api.onrender.com/change_password', {
                 method: 'POST', 
                 body: formData,
                 headers: {
@@ -110,7 +110,7 @@ function UserAccountManage({showDelete = true, is_user = true, homepage_path='/h
 
     const fetchLogOut = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/logout', {
+            const response = await fetch('https://booking-site-api.onrender.com/logout', {
                 method: 'POST', 
                 body: formData,
                 credentials: 'include',
