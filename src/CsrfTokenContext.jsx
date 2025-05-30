@@ -23,7 +23,9 @@ export function CsrfTokenProvider({children}){
                     console.log("Response not found");
                 }
             }catch(error){
-                const retry = await fetch('https://booking-site-api.onrender.com/get_user_csrf);
+                const retry = await fetch('https://booking-site-api.onrender.com/get_user_csrf',{
+                    credentials: 'include,
+                });
             }
         }, 1000)
  
