@@ -11,7 +11,7 @@ function postWarmup(){
     useEffect(()=>{
         const fetchWarmup = setInterval( async () =>{
         try{
-            const response = await fetch('http://127.0.0.1:5011/check_post_request', {
+            const response = await fetch('https://booking-site-api.onrender.com/check_post_request', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
