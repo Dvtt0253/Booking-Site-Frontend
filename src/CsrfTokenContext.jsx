@@ -9,7 +9,7 @@ export function CsrfTokenProvider({children}){
     
 
     useEffect(()=>{
-        const fetchCsrf = async () => {
+        const fetchCsrf = setInterval(async () => {
             try{
                 const response = await fetch('https://booking-site-api.onrender.com/get_user_csrf', {
                     credentials: 'include',
@@ -17,15 +17,16 @@ export function CsrfTokenProvider({children}){
                 const data = await response.json();
                 if(data.success){
                     setCsrfToken(data.session_csrf);
+                    clearInterval(fetchCsrf);
                 }
                 else{
                     console.log("Response not found");
                 }
             }catch(error){
-                console.log("Fetch could not be completed");
+                const retry = await fetch('https://booking-site-api.onrender.com/get_user_csrf);
             }
-        }
-        fetchCsrf()
+        }, 1000)
+ 
     }, [])
 
    
