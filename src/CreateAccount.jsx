@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +14,7 @@ function CreateAccount(){
 
 
         try{
-            const response = await fetch("http://127.0.0.1:5011/create_account", {
+            const response = await fetch("https://booking-site-api.onrender.com/create_account", {
                 method: 'POST',
                 body: formData,
                 credentials: 'include',
