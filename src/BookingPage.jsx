@@ -14,7 +14,7 @@ function BookingPage(){
     useEffect(()=>{
         const fetchAppoints = async () => {
             try{
-                 const response = await fetch('http://127.0.0.1:5011/booking_page',{
+                 const response = await fetch('https://booking-site-api.onrender.com/booking_page',{
                     credentials: 'include',
                  });
                  const data = await response.json();
@@ -52,7 +52,7 @@ function BookingPage(){
     }, [])
     const fetchAppointCancel = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/cancel_booking', {
+            const response = await fetch('https://booking-site-api.onrender.com/cancel_booking', {
                 method: 'POST',
                 body: formData,
                 credentials: 'include',
