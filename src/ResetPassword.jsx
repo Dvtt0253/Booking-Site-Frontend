@@ -9,7 +9,7 @@ function ResetPassword (){
 
     const fetchPasswordReset =  async(formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/reset_password_verify', {
+            const response = await fetch('https://booking-site-api.onrender.com/reset_password_verify', {
                 method : 'POST',
                 body: formData,
                 headers: {
