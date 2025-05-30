@@ -19,6 +19,10 @@ function Login() {
                 method: 'POST',
                 body: formData,
                 credentials: 'include',
+                 headers: {
+                    'X-CSRFToken': csrf_token.csrfToken,
+
+                },
             },
 
             
