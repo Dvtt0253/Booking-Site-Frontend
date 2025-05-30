@@ -25,7 +25,7 @@ function AdminHomepage(){
 
         const fetchInfo = async () => {
             try{
-                const response = await fetch('http://127.0.0.1:5011/admin_homepage', {
+                const response = await fetch('https://booking-site-api.onrender.com/admin_homepage', {
                     credentials: 'include'
                 });
 
@@ -69,7 +69,7 @@ function AdminHomepage(){
 
     const fetchUserAdd = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_add_user', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_add_user', {
                 method : 'POST',
                 body: formData,
                 headers: {
@@ -108,7 +108,7 @@ function AdminHomepage(){
     const fetchDoctorAdd = async (formData) => {
 
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_add_doctor', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_add_doctor', {
                 method : 'POST',
                 body: formData,
                 headers: {
@@ -143,7 +143,7 @@ function AdminHomepage(){
     }
     const fetchAppointAdd = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_add_appointment', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_add_appointment', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -176,7 +176,7 @@ function AdminHomepage(){
     }
     const fetchAvailAdd = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_add_avail', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_add_avail', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -210,7 +210,7 @@ function AdminHomepage(){
     const fetchUserChange = async (formData) =>{
 
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_users', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_users', {
                 method : "POST", 
                 body: formData,
                 headers: {
@@ -244,7 +244,7 @@ function AdminHomepage(){
     }
     const fetchDoctorChange = async (formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_doctors', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_doctors', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -277,7 +277,7 @@ function AdminHomepage(){
     }
     const fetchAppointChange = async(formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_appointments', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_appointments', {
                 method: "POST",
                 body: formData,
                 headers: {
@@ -309,7 +309,7 @@ function AdminHomepage(){
     }
     const fetchAvailChange = async(formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_avail', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_avail', {
                 method: 'POST', 
                 body: formData,
                 headers: {
@@ -341,7 +341,7 @@ function AdminHomepage(){
     }
     const fetchUserDelete = async(formData) => {
         try{
-            const response = await fetch('http://127.0.0.1:5011/admin_delete_user', {
+            const response = await fetch('https://booking-site-api.onrender.com/admin_delete_user', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -374,7 +374,7 @@ function AdminHomepage(){
     }
     const fetchDoctorDelete = async(formData) => {
         try{
-            const response = await fetch("http://127.0.0.1:5011/admin_delete_doctor", {
+            const response = await fetch("https://booking-site-api.onrender.com/admin_delete_doctor", {
                 method : 'POST',
                 body: formData,
                 headers: {
@@ -407,7 +407,7 @@ function AdminHomepage(){
     }
      const fetchAppointDelete = async(formData) => {
         try{
-            const response = await fetch("http://127.0.0.1:5011/admin_delete_appointment", {
+            const response = await fetch("https://booking-site-api.onrender.com/admin_delete_appointment", {
                 method : 'POST',
                 body: formData,
                 headers: {
@@ -442,7 +442,7 @@ function AdminHomepage(){
     }
     const fetchAvailDelete= async(formData) => {
         try{
-            const response = await fetch("http://127.0.0.1:5011/admin_delete_avail", {
+            const response = await fetch("https://booking-site-api.onrender.com/admin_delete_avail", {
                 method : 'POST',
                 body: formData,
                 headers: {
