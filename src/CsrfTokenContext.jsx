@@ -24,7 +24,7 @@ export function CsrfTokenProvider({children}){
                 }
             }catch(error){
                 const retry = await fetch('https://booking-site-api.onrender.com/get_user_csrf',{
-                    credentials: 'include,
+                    credentials: 'include',
                 });
             }
         }, 1000)
