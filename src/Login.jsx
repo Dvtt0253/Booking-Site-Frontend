@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BlueLogo from './BlueLogo.jsx'
-import { useCsrfToken } from './CsrfTokenContext.jsx';
+
 
 
 function Login() {
 
     const navigate = useNavigate();
-    const csrf_token = useCsrfToken();
+   
 
   
 
@@ -21,10 +21,7 @@ function Login() {
                 method: 'POST',
                 body: formData,
                 credentials: 'include',
-                 headers: {
-                    'X-CSRFToken': csrf_token.csrfToken,
-
-                },
+               
             },
 
             
