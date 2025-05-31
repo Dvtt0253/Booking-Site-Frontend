@@ -44,14 +44,14 @@ function Login() {
             else if(data.success && data.Role === "User"){
 
                 navigate('/please_wait');
-                setIsLoggedIn(True);
+                setIsLoggedIn(true);
                
              
 
             }
             else if(data.success && data.Role === "Admin"){
                 navigate('/admin_homepage');
-                setIsLoggedIn(True);
+                setIsLoggedIn(true);
                 
                
                 
