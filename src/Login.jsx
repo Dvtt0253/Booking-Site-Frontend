@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BlueLogo from './BlueLogo.jsx'
+import BlueLogo from './BlueLogo.jsx';
+import CsrfTokenContext from './CsrfTokenContext.jsx';
 
 
 
@@ -42,12 +43,18 @@ function Login() {
             else if(data.success && data.Role === "User"){
 
                 navigate('/please_wait');
+                return(
+                    <CsrfTokenContext/>
+                );
                
              
 
             }
             else if(data.success && data.Role === "Admin"){
-                navigate('/admin_homepage')
+                navigate('/admin_homepage');
+                return(
+                    <CsrfTokenContext/>
+                );
                 
                
                 
