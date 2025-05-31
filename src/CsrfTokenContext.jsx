@@ -34,6 +34,7 @@ export function CsrfTokenProvider({children}){
                 });
             }
         }
+        fetchCsrf();
         
  
     }, [])
