@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BlueLogo from './BlueLogo.jsx';
-import CsrfTokenContext from './CsrfTokenContext.jsx';
+import {CsrfTokenProvider} from './CsrfTokenContext.jsx';
 
 
 
 function Login() {
 
     const navigate = useNavigate();
+    const[isLoggedIn, setIsLoggedIn] = useState(false);
    
 
   
@@ -43,18 +44,14 @@ function Login() {
             else if(data.success && data.Role === "User"){
 
                 navigate('/please_wait');
-                return(
-                    <CsrfTokenContext/>
-                );
+                setIsLoggedIn(True);
                
              
 
             }
             else if(data.success && data.Role === "Admin"){
                 navigate('/admin_homepage');
-                return(
-                    <CsrfTokenContext/>
-                );
+                setIsLoggedIn(True);
                 
                
                 
@@ -88,6 +85,7 @@ function Login() {
 
     return(
             <>
+                {isLoggedIn && <CsrfTokenProvider/>}
             
             
                 <BlueLogo/>
