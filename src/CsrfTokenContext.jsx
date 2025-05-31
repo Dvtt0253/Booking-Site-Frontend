@@ -6,11 +6,13 @@ const CsrfTokenContext = createContext();
 
 export function CsrfTokenProvider({children}){
     const [csrfToken, setCsrfToken] = useState("");
+
+    
     
     
 
     useEffect(()=>{
-        export const fetchCsrf = setInterval( async () => {
+        export const fetchCsrf = async () => {
             try{
                 const response = await fetch('https://booking-site-api.onrender.com/get_user_csrf', {
                     credentials: 'include',
@@ -28,7 +30,7 @@ export function CsrfTokenProvider({children}){
                     credentials: 'include',
                 });
             }
-        }, 2000)
+        }
         return () => clearInterval(fetchCsrf)
  
     }, [])
