@@ -12,6 +12,7 @@ export function CsrfTokenProvider({children}){
     
 
     useEffect(()=>{
+        console.log("check has started");
          const fetchCsrf = async () => {
             try{
                 const response = await fetch('https://booking-site-api.onrender.com/get_user_csrf', {
