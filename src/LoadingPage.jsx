@@ -3,7 +3,7 @@ import UserHomepage from './UserHomepage.jsx';
 import { useNavigate } from 'react-router-dom';
 import PostWarmup from './PostWarmup.jsx';
 import NewLogo from './NewLogo.jsx';
-import CsrfTokenProvider from './CsrfTokenContext.jsx';
+import {CsrfTokenProvider} from './CsrfTokenContext.jsx';
 
 function LoadingPage(){
 
