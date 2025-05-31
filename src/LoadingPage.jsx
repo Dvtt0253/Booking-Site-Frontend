@@ -49,8 +49,11 @@ function LoadingPage(){
     }
     else{
        return(
-        <CsrfTokenProvider/>
-        <PostWarmup/>
+        <>
+             <CsrfTokenProvider/>
+            <PostWarmup/>
+        </>
+       
        );
 
     }
