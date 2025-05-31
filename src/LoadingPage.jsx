@@ -3,7 +3,7 @@ import UserHomepage from './UserHomepage.jsx';
 import { useNavigate } from 'react-router-dom';
 import PostWarmup from './PostWarmup.jsx';
 import NewLogo from './NewLogo.jsx';
-
+import {fetchCSRF} from './CsrfTokenContext.jsx';
 
 function LoadingPage(){
 
@@ -21,6 +21,7 @@ function LoadingPage(){
                 if(data.status === 200){
                     setReady(true);
                     clearInterval(interval);
+                    fetchCSRF();
                 }
                 else{
                     setReady(false);
