@@ -5,10 +5,10 @@ import BlueLogo from './BlueLogo.jsx';
 
 
 
-function Login({loggedIn = isLoggedIn}) {
+function Login() {
 
     const navigate = useNavigate();
-    const[isLoggedIn, setIsLoggedIn] = useState(false);
+    
    
 
   
@@ -44,14 +44,14 @@ function Login({loggedIn = isLoggedIn}) {
             else if(data.success && data.Role === "User"){
 
                 navigate('/please_wait');
-                setIsLoggedIn(true);
+              
                
              
 
             }
             else if(data.success && data.Role === "Admin"){
                 navigate('/admin_homepage');
-                setIsLoggedIn(true);
+               
                 
                
                 
