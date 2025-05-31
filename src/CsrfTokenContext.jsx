@@ -29,6 +29,7 @@ export function CsrfTokenProvider({children}){
                 });
             }
         }, 2000)
+        return () => clearInterval(fetchCsrf)
  
     }, [])
 
