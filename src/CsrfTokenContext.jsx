@@ -1,6 +1,7 @@
 import { createContext, useContext } from "react";
 import {useState, useEffect} from 'react';
 
+
 const CsrfTokenContext = createContext();
 
 export function CsrfTokenProvider({children}){
