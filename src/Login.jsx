@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BlueLogo from './BlueLogo.jsx';
-import {CsrfTokenProvider} from './CsrfTokenContext.jsx';
 
 
 
-function Login() {
+
+function Login({loggedIn = isLoggedIn}) {
 
     const navigate = useNavigate();
     const[isLoggedIn, setIsLoggedIn] = useState(false);
@@ -85,7 +85,7 @@ function Login() {
 
     return(
             <>
-                {isLoggedIn && <CsrfTokenProvider/>}
+               
             
             
                 <BlueLogo/>
