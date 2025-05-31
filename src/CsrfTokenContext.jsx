@@ -13,7 +13,7 @@ export function CsrfTokenProvider({children}){
 
     useEffect(()=>{
         console.log("check has started");
-         const fetchCsrf = setInterval(async () => {
+         const fetchCsrf = async () => {
              console.log("interval has started");
              
             try{
@@ -23,7 +23,7 @@ export function CsrfTokenProvider({children}){
                 const data = await response.json();
                 if(data.success){
                     setCsrfToken(data.session_csrf);
-                    clearInterval(fetchCsrf);
+                    
                 }
                 else{
                     console.log("Response not found");
@@ -33,8 +33,8 @@ export function CsrfTokenProvider({children}){
                     credentials: 'include',
                 });
             }
-        }, 2000)
-        return () => clearInterval(fetchCsrf)
+        }
+        
  
     }, [])
 
