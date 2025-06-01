@@ -26,7 +26,7 @@ function UserAccountManage({showDelete = true, is_user = true, homepage_path='/h
 
                 const data = await response.json();
                 if(data.success){
-                    console.log(data);
+                
                     console.log("Data fetched Successfully");
                     setFirstName(data.first_name);
                     setLastName(data.last_name);
