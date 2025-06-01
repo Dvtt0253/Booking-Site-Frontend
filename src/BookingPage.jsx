@@ -4,6 +4,8 @@ import { useCsrfToken } from './CsrfTokenContext';
 import MobileNav from './MobileNav.jsx';
 import NewLogo from './NewLogo.jsx';
 import NavLogo from './NavLogo.jsx';
+import SuccessAlert from './SuccessAlert.jsx';
+import ErrorAlert from './ErrorAlert.jsx';
 
 function BookingPage(){
     const [zippedCancelled, setZippedCan] = useState([]);
@@ -35,15 +37,22 @@ function BookingPage(){
                    if (process.env.NODE_ENV === 'development') {
                     console.log("Fetch could not be completed");
                     }
-                    alert("Please wait. An error occured");
-                    navigate('/please_wait');
+                     navigate('/please_wait');
+                    return(
+                        <ErrorAlert errorMessage={"Please wait. An error occured"}/>
+                    );
+                    
+                   
                  }
             }catch(error){
                if (process.env.NODE_ENV === 'development') {
                     console.log("Fetch could not be completed");
                     }
-               alert("Please wait. An error occured");
+              
                 navigate('/please_wait');
+                 return(
+                        <ErrorAlert errorMessage={"Please wait. An error occured"}/>
+                    );
             }
            
         }
@@ -64,8 +73,11 @@ function BookingPage(){
                 location.reload();
             }
             else{
-                alert("A problem occurred while cancelling your appointment");
+               
                 console.log("Problem occured");
+                 return(
+                        <ErrorAlert errorMessage={"A problem occurred while cancelling your appointment"}/>
+                    );
             }
         }catch(error){
 
