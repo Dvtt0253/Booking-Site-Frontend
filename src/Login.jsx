@@ -60,7 +60,7 @@ function Login() {
             }
             else{
 
-                navigate('/login_page');
+               
                 
                 return(
                     <ErrorAlert errorMessage = {data.message}/>
