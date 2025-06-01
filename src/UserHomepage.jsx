@@ -34,13 +34,13 @@ function UserHomepage(){
                 });
                 const data = await response.json();
                 if(data.success){
-                    console.log(data);
+                    
                     setFirstName(data.first_name);
                     setLastName(data.last_name);
-                    console.log(`firstName:${firstName}`);
-                    console.log(`lastName:${lastName}`);
+                  
+                  
                     setDoctors(data.doctors);
-                    console.log(`alldoctors: ${alldoctors}`);
+               
                     
                
 
@@ -76,7 +76,7 @@ function UserHomepage(){
             if(data.success){
                 setDoctorsAvail(data.avail);
                 console.log('Avail data receieved successfully');
-                console.log(data.avail);
+               
             }
         }catch(error){
             console.log("Fetch couldn't be completed");
@@ -137,7 +137,7 @@ function UserHomepage(){
         homepage.style.display = 'none';
         bookingForm.style.display = 'block';
         hiddenInput.value = doctorID;
-        console.log(hiddenInput.value);
+     
        alldoctors.map((doctor) => {
          if(doctor.id === doctorID){
             document.getElementById("chosen-doctor-photo").src = doctor.headshot;
