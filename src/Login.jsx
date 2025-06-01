@@ -31,7 +31,7 @@ function Login() {
               
             )
             const data = await response.json();
-            console.log(data);
+          
             if(data.status === 403 && data.offense === "Login Attempts"){
                 navigate('/403_Response');
                 
