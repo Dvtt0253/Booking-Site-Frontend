@@ -2,6 +2,8 @@ import React from "react";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import NewLogo from './NewLogo.jsx';
+import SuccessAlert from './SuccessAlert.jsx';
+import ErrorAlert from './ErrorAlert.jsx';
 
 
 function CreateAccount(){
@@ -40,11 +42,17 @@ function CreateAccount(){
                 const user_token = data.token;
                 
                 navigate('/verify_message');
-                alert(data.message);
+               
+                return(
+                    <SuccessAlert flashMessage = {data.message}/>
+                );
             }
             else{
                 navigate('/');
-                alert(data.message);
+               
+                 return(
+                    <ErrorAlert errorMessage = {data.message}/>
+                );
             }
         }catch(error){
             console.error("Error", error);
