@@ -27,7 +27,7 @@ function BookingPage(){
 
                 }
                  else if(data.success){
-                    console.log(data);
+                 
                     console.log("Appoints fetched successfully");
                     setZippedCan(data.zip_cancelled);
                     setZippedActive(data.zip_active);
