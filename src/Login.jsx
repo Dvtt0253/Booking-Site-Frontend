@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BlueLogo from './BlueLogo.jsx';
-import SuccessAlert from './SuccessAlert.jsx';
-import ErrorAlert from './ErrorAlert.jsx';
+
 
 
 
@@ -59,12 +58,10 @@ function Login() {
                 
             }
             else{
-
-               
+                 alert(data.message);
+                 navigate('/login_page');
                 
-                return(
-                    <ErrorAlert errorMessage = {data.message}/>
-                );
+                
                
             }
         }catch(error){
