@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useCsrfToken } from "./CsrfTokenContext";
+import SuccessAlert from "./SuccessAlert.jsx";
+import ErrorAlert from "./ErrorAlert.jsx";
 
 function ConfirmAccountDelete (){
 
@@ -24,18 +26,25 @@ function ConfirmAccountDelete (){
             }
             else if(data.success){
                 navigate('/login_page');
-                alert(data.message);
+            
+                return(
+                    <SuccessAlert flashMessage={data.message}/>
+                );
             }
             else{
                
-                alert(data.message);
+              
                 location.reload();
+                return(
+                    <ErrorAlert errorMessage={data.message}/>
+                );
 
             }
         }catch(error){
             
             alert("Please wait and try again. An error occured");
             navigate('/please_wait');
+            
         }
     }
 
