@@ -704,6 +704,38 @@ input{
     text-align: center;
     margin-top: 15vh;
 }
+.success-flash{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    left: 50vw;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #e6ffed;
+    color: #2e7d32;
+    
+    
+}
+.error-flash{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    left: 50vw;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ffebee;
+    color: #c62828;
+    
+    
+}
 @media(min-width: 300px) and (max-width: 900px){
     .login-form input{
     display:block;
